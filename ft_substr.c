@@ -6,7 +6,7 @@
 /*   By: aelsiddi <aelsiddi@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/28 05:20:30 by aelsiddi          #+#    #+#             */
-/*   Updated: 2022/01/27 19:51:23 by aelsiddi         ###   ########.fr       */
+/*   Updated: 2022/01/27 21:43:03 by aelsiddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	p = malloc(len + 1);
 	if (!p)
 		return (NULL);
-	while (s[i] && z < len)
+	while (s[i] != '\0' && z < len)
 	{
 		p[z] = s[i];
 		i++;
