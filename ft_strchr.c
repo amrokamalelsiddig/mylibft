@@ -6,11 +6,10 @@
 /*   By: aelsiddi <aelsiddi@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/23 01:18:33 by aelsiddi          #+#    #+#             */
-/*   Updated: 2021/12/26 21:26:10 by aelsiddi         ###   ########.fr       */
+/*   Updated: 2022/01/30 21:51:52 by aelsiddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
@@ -21,8 +20,6 @@ char	*ft_strchr(const char *s, int c)
 
 	i = 0;
 	str = (char *)s;
-	if (!(str))
-		return (NULL);
 	len = ft_strlen(str);
 	if (c == '\0')
 		return (str + ft_strlen(str));

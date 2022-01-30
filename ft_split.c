@@ -6,72 +6,74 @@
 /*   By: aelsiddi <aelsiddi@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 21:20:42 by aelsiddi          #+#    #+#             */
-/*   Updated: 2022/01/02 02:02:35 by aelsiddi         ###   ########.fr       */
+/*   Updated: 2022/01/30 22:53:00 by aelsiddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <assert.h>
+#include "libft.h"
 
-int	number_of_sep(char const *str, char c)
+int	cont(char const *s, char c)
 {
 	int	i;
 	int	j;
 
 	i = 0;
 	j = 0;
-	while (str[i])
+	while (*s)
 	{
-		if (str[i] == c)
-			j++;
-		i++;
+		if (*s == c && j == 1)
+		{
+			i++;
+			j = 0;
+		}
+		else if (*s != c)
+			j = 1;
+		s++;
 	}
-	return (j);
+	return (i);
 }
 
-//amro;kamal
-int	count_delimiter(char const *str, char c)
+char	*add_word(char const *s, int i, int j)
 {
-	int	i;
-	int	z;
+	char	*str;
+	char	*str1;
+	int		k;
 
-	z = 0;
+	k = 0;
+	str1 = (char *)s;
+	str = (char *)malloc(i - j + 1);
+	while (k < (i - j))
+	{
+		str[k] = str1[j + k];
+		k++;
+	}
+	str[k] = '\0';
+	return (str);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**result;
+	int		i;
+	int		j;
+	int		k;
+
 	i = 0;
-	while (str[z])
+	j = 0;
+	k = 0;
+	result = (char **)malloc(sizeof(result) * (cont(s, c) + 1));
+	if (!result || !s)
+		return (NULL);
+	while (s[i])
 	{
-		if (str[z] == c && str[z + 1] != c && str[z - 1] != c)
+		j = i;
+		while (s[i] != c && s[i])
 			i++;
-		z++;
-	}
-	return (i + 1);
-}
-
-char **allocate_words(const *str, char c, int k)
-{
-	char	**ptr;
-	int		i = 0;
-	int 	j = 0;
-	int 	e = 0
-	ptr = (char)malloc(sizeof(char) * (k));
-	while (j < strlen(str))
-	{
-		i = 0;
-		while (str[i] != c && str[i + 1] !=c )
+		if (i != j)
+			result[k++] = add_word(s, i, j);
+		while (s[i] && s[i] == c)
 			i++;
-		else 
-			*ptr[e] = ft_substr(str, j - i ,i + 1);
-		j++;
 	}
-
+	result[k] = 0;
+	return (result);
 }
-
-int main(void)
-{
-	printf("%d",count_delimiter(",,,,,,,,amro,k,a,m,a,l",','));
-	return (0);
-}
-
-// 

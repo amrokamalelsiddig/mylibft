@@ -6,11 +6,11 @@
 /*   By: aelsiddi <aelsiddi@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 12:45:53 by aelsiddi          #+#    #+#             */
-/*   Updated: 2021/12/31 17:44:02 by aelsiddi         ###   ########.fr       */
+/*   Updated: 2022/01/30 20:52:11 by aelsiddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(char c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c < 127)
 	{
