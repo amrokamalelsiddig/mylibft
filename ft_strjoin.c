@@ -6,7 +6,7 @@
 /*   By: aelsiddi <aelsiddi@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 22:16:07 by aelsiddi          #+#    #+#             */
-/*   Updated: 2022/01/30 21:58:43 by aelsiddi         ###   ########.fr       */
+/*   Updated: 2022/01/30 23:00:14 by aelsiddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		len;
 	char	*str;
 
-	if (!s1 && !s2)
-		return (0);
+	if (!(s1))
+		return (NULL);
 	len = ft_strlen(s1) + ft_strlen(s2);
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)

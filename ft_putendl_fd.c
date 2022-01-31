@@ -6,7 +6,7 @@
 /*   By: aelsiddi <aelsiddi@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/31 20:11:39 by aelsiddi          #+#    #+#             */
-/*   Updated: 2022/01/30 22:02:03 by aelsiddi         ###   ########.fr       */
+/*   Updated: 2022/01/30 23:01:54 by aelsiddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl_fd(char *str, int fd)
 {
+	if (!str)
+		return ;
 	write(fd, str, ft_strlen(str));
 	write(fd, "\n", 1);
 }

@@ -6,7 +6,7 @@
 /*   By: aelsiddi <aelsiddi@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/28 05:20:30 by aelsiddi          #+#    #+#             */
-/*   Updated: 2022/01/29 21:32:04 by aelsiddi         ###   ########.fr       */
+/*   Updated: 2022/01/30 22:57:25 by aelsiddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	z = 0;
 	i = start;
+	if (!(s))
+		return (NULL);
 	if ((!s) || (start > ft_strlen(s)))
 		len = 0;
 	p = (char *)malloc(sizeof(char) * (len + 1));

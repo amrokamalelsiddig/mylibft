@@ -6,7 +6,7 @@
 /*   By: aelsiddi <aelsiddi@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 17:04:50 by aelsiddi          #+#    #+#             */
-/*   Updated: 2022/01/30 22:48:43 by aelsiddi         ###   ########.fr       */
+/*   Updated: 2022/01/30 23:11:07 by aelsiddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	copy_src = (unsigned char *)src;
 	copy_dst = (unsigned char *)dst;
-	if (!(copy_dst) && !(copy_src))
-		return (NULL);
 	i = 0;
+	if (!dst && !src)
+		return (NULL);
 	if (src < dst)
 	{
 		while (len)

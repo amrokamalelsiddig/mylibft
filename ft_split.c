@@ -6,7 +6,7 @@
 /*   By: aelsiddi <aelsiddi@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 21:20:42 by aelsiddi          #+#    #+#             */
-/*   Updated: 2022/01/30 22:53:00 by aelsiddi         ###   ########.fr       */
+/*   Updated: 2022/01/30 22:59:22 by aelsiddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	k = 0;
+	if (!(s))
+		return (NULL);
 	result = (char **)malloc(sizeof(result) * (cont(s, c) + 1));
 	if (!result || !s)
 		return (NULL);
