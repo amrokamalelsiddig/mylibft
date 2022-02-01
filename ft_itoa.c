@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aelsiddi <aelsiddi@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: aelsiddi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/31 18:43:50 by aelsiddi          #+#    #+#             */
-/*   Updated: 2022/01/29 20:27:24 by aelsiddi         ###   ########.fr       */
+/*   Created: 2022/02/02 00:44:45 by aelsiddi          #+#    #+#             */
+/*   Updated: 2022/02/02 01:17:35 by aelsiddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	digit_count(long n)
+int		digit_count(long n)
 {
-	int		len;
+	int	len;
 
 	len = 0;
 	if (n == 0)

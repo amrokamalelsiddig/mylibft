@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aelsiddi <aelsiddi@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: aelsiddi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/24 17:04:50 by aelsiddi          #+#    #+#             */
-/*   Updated: 2022/02/01 19:46:39 by aelsiddi         ###   ########.fr       */
+/*   Created: 2022/02/02 00:42:56 by aelsiddi          #+#    #+#             */
+/*   Updated: 2022/02/02 01:02:53 by aelsiddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,3 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 			copy_dst[i] = copy_src[i];
 	return (copy_dst);
 }
-
-

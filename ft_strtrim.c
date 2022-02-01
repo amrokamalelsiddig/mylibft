@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aelsiddi <aelsiddi@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: aelsiddi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/30 01:57:06 by aelsiddi          #+#    #+#             */
-/*   Updated: 2021/12/31 18:05:52 by aelsiddi         ###   ########.fr       */
+/*   Created: 2022/02/02 00:46:57 by aelsiddi          #+#    #+#             */
+/*   Updated: 2022/02/02 01:16:56 by aelsiddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-int	exisit(char c, char const *set)
+int		exisit(char c, char const *set)
 {
 	int	i;
 
@@ -50,16 +49,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[i] = '\0';
 	return (str);
 }
-
-// int	main(void)
-// {
-// 	char test[] = "amrokamal";
-// 	char test2[] = "ro";
-// 	int i	= 0;
-// 	while (test[i] != 0)
-// 	{
-// 		printf("%d\n",exisit(test2[i],test));
-// 		i++;
-// 	}
-// 	return (0);
-// }

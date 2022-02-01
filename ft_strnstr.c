@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aelsiddi <aelsiddi@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: aelsiddi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/24 04:42:48 by aelsiddi          #+#    #+#             */
-/*   Updated: 2021/12/24 15:28:43 by aelsiddi         ###   ########.fr       */
+/*   Created: 2022/02/02 00:47:48 by aelsiddi          #+#    #+#             */
+/*   Updated: 2022/02/02 01:04:02 by aelsiddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
@@ -36,19 +35,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-
-// int	main(void)
-// {
-// 	const char	*largestring = "Foo Bar Baz";
-// 	const char	*smallstring = "Bar";
-// 	char		*ptr;
-// 	const char	*largestring2 = "Foo Bar Baz";
-// 	const char	*smallstring2 = "Bar";
-// 	char		*ptr2;
-
-// 	ptr = strnstr(largestring, smallstring, 8);		
-// 	printf("output of original func : %s\n",ptr);
-// 	ptr2 = ft_strnstr(largestring2, smallstring2, 8);	
-// 	printf("output of my func : %s",ptr2);
-// 	return(0);
-// }

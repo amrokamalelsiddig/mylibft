@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aelsiddi <aelsiddi@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: aelsiddi <aelsiddi@student.42.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/20 13:34:11 by aelsiddi          #+#    #+#             */
-/*   Updated: 2022/01/30 20:46:42 by aelsiddi         ###   ########.fr       */
+/*   Created: 2022/02/01 23:52:15 by aelsiddi          #+#    #+#             */
+/*   Updated: 2022/02/01 23:52:56 by aelsiddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,3 @@ int	ft_atoi(const char *str)
 		return (0);
 	return (result * s);
 }
-
-// #include <stdio.h>
-
-// int main()
-// {
-// 	printf("%d\n", ft_atoi("6846436464845876865"));
-// 	printf("%d\n", atoi("684646463484587687687"));
-// }
