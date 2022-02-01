@@ -6,7 +6,7 @@
 /*   By: aelsiddi <aelsiddi@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/24 21:20:42 by aelsiddi          #+#    #+#             */
-/*   Updated: 2022/01/30 22:59:22 by aelsiddi         ###   ########.fr       */
+/*   Updated: 2022/02/01 19:56:11 by aelsiddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ char	*add_word(char const *s, int i, int j)
 	k = 0;
 	str1 = (char *)s;
 	str = (char *)malloc(i - j + 1);
+	if(!str)
+		return(NULL);
 	while (k < (i - j))
 	{
 		str[k] = str1[j + k];
@@ -61,6 +63,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	k = 0;
+	
 	if (!(s))
 		return (NULL);
 	result = (char **)malloc(sizeof(result) * (cont(s, c) + 1));
